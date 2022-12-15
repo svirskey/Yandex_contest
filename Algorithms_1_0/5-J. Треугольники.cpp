@@ -20,7 +20,7 @@ int main()
 	}
 	
 	int64_t result = 0;
-	for (int i = 0; i < N; ++i) // O(N)
+	for (int i = 0; i < N; ++i)
 	{
 		auto &&[x1,y1] = points[i];
 
@@ -32,15 +32,9 @@ int main()
 			int64_t lenn = (x2 - x1)*(x2 - x1) + (y2 - y1)*(y2 - y1);
 			sides.push_back(lenn);
 			if (used_points.contains({x1 - x2, y1 - y2}))
-			{
-				//cout << "i = "<< i << " j = " << j << " -x2 = " <<  -x2 << " -y2 = "<< -y2 << endl;
 				--result;
-			}
 			used_points.insert({x2 - x1,y2 - y1});
 		}
-		// for (auto&& [xx, yy] : used_points)
-			// cout << xx << " " << yy << " ";
-		// cout << endl;
 		sort(sides.begin(), sides.end());
 		int right = 0;
 		for (int left = 0; left < sides.size(); ++left) 

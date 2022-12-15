@@ -12,10 +12,6 @@ int main()
 	
 	while (fin >> str)
 	{
-		//str[0] = tolower(str[0]);
-		//if (!isalpha(str.back()))
-			//str.pop_back();
-		//cout << str << endl;
 		if (!uset.contains(str))
 			uset.insert(str);
 	}

@@ -26,12 +26,6 @@ int main()
 		if (points[i - 1] < points[i - 2])
 			descrease[i] += (points[i - 2] - points[i - 1]);
 	}
-	// for (auto&el : increase)
-		// cout << el << " ";
-	// cout << endl;
-	// for (auto&el : descrease)
-		// cout << el << " ";
-	// cout << endl;
 	fin >> M;
 	for (int i = 0; i < M; ++i)
 	{
